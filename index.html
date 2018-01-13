@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css" attr>
-    <link rel="text/javascript" href="js/codigo.css" attr>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/codigo.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" attr>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" attr>
   </head>
@@ -35,121 +36,123 @@
           <h2>Algo sobre mi... </h2>
         </div>
         <div class="col-xs-8"> 
-          <nav id="navcurriculum"></nav>
-          <div class="row">
-            <div class="col-xs-3"><a href="http://" target="_blank">resumen</a></div>
-            <div class="col-xs-3"><a href="http://" target="_blank">habilidades</a></div>
-            <div class="col-xs-3"><a href="http://" target="_blank">educacion</a></div>
-            <div class="col-xs-3"> <a href="http://" target="_blank">experiencia laboral</a></div>
+          <div class="carousel slide" id="myCarousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <ol></ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <article class="artcurri" id="resumen"></article>
+                <p>Apasionado por aprender y desarrollar nuevas habilidades. En mi formación combino el autoaprendizaje con la educación formal. Luego de egresar del Instituto Politécnico Superior, cursé 25 asignaturas en la universidad sobre matemática, física, química, biología, con promedio 9. Actualmente desarrollo mis competencias en diseño de software. Soy alumno inscripto de la carrera analista de sistemas en el IPS. Poseo certificado de Front-end Developer y 8 cursos completos de desarrollo de software.</p>
+              </div>
+              <div class="item">
+                <article class="artcurri" id="habilidades">
+                  <table>
+                    <tr>
+                      <th colspan="3">
+                        <h4>CIENCIAS EXACTAS:</h4>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-area-chart"> </i></th>
+                      <th>Matemática</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"> </i></i></th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-leaf"></i></th>
+                      <th>Física</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i></i></th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-flask"></i></th>
+                      <th>Química</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i></i></th>
+                    </tr>
+                    <tr>
+                      <th colspan="3">
+                        <h4>INFORMÁTICA:</h4>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-html5"></i></th>
+                      <th>Diseño web</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"> </i></i></th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-git"></i></th>
+                      <th>Git</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i></i></th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-linux"></i></th>
+                      <th>Linux</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i></i></th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-coffee"></i></th>
+                      <th>Java</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i></i></th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-diamond"></i></th>
+                      <th>Ruby</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i></i></th>
+                    </tr>
+                    <tr>
+                      <th colspan="3">
+                        <h4>DISEÑO GRÁFICO</h4>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th><i>Ai</i></th>
+                      <th>Adobe illustrator</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"> </i></i></th>
+                    </tr>
+                    <tr>
+                      <th><i>Ps</i></th>
+                      <th>Adobe Photoshop</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"> </i></i></th>
+                    </tr>
+                    <tr>
+                      <th colspan="3">
+                        <h4>IDIOMAS	</h4>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th><i class="fa fa-comments"></i></th>
+                      <th>Inglés</th>
+                      <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i></i></th>
+                    </tr>
+                  </table>
+                </article>
+              </div>
+              <div class="item">
+                <article class="artcurri" id="educacion">
+                  <ul>
+                    <li>Analista Universitario en Sistemas, Instituto Politécnico Superior. Inscripción 2018 con materias homologadas.</li>
+                    <li>Licenciatura en Biotecnología, Universidad Nacional de Rosario. 2012-2015.</li>
+                    <li>Educación secundaria, Instituto Politécnico Superior. 2005-2011.</li>
+                    <li>Curso desarrollo Java, plan 111 mil programadores. 2017-act.</li>
+                    <li>Inglés 4to Adol Senior, ARICANA. 2008-2010.</li>
+                  </ul>
+                </article>
+              </div>
+              <div class="item">
+                <article class="artcurri" id="experiencia">
+                  <ul>
+                    <li>Preventista en Distribuidora Correcaminos. 2016-act.
+                      <quote>Desarrollé el sistema de carga de pedidos, estadísticas y facturación utilizando herramientas de Google.</quote>
+                    </li>
+                    <li>Docente Particular, Instituto INEI. 2012-2015.</li>
+                    <li>Pasante, Instituto de Biología Molecular de Rosario (IBR-CONICET). abr-sept 2015.      </li>
+                  </ul>
+                </article>
+              </div>
+            </div><a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
           </div>
-        </div>
-        <div class="col-xs-8"> 
-          <article id="resumen">
-            <p>Apasionado por aprender y desarrollar nuevas habilidades. En mi formación combino el autoaprendizaje con la educación formal. Luego de egresar del Instituto Politécnico Superior, cursé 25 asignaturas en la universidad sobre matemática, física, química, biología, con promedio 9. Actualmente desarrollo mis competencias en diseño de software. Soy alumno inscripto de la carrera analista de sistemas en el IPS. Poseo certificado de Front-end Developer y 8 cursos completos de desarrollo de software.</p>
-          </article>
-        </div>
-        <div class="col-xs-8"> 
-          <article class="hide" id="habilidades">
-            <table>
-              <tr>
-                <th colspan="3">
-                  <h4>CIENCIAS EXACTAS:</h4>
-                </th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-area-chart"> </i></th>
-                <th>Matemática</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"> </i></i></th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-leaf"></i></th>
-                <th>Física</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i></i></th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-flask"></i></th>
-                <th>Química</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i></i></th>
-              </tr>
-              <tr>
-                <th colspan="3">
-                  <h4>INFORMÁTICA:</h4>
-                </th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-html5"></i></th>
-                <th>Diseño web</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"> </i></i></th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-git"></i></th>
-                <th>Git</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i></i></th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-linux"></i></th>
-                <th>Linux</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i></i></th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-coffee"></i></th>
-                <th>Java</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i></i></th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-diamond"></i></th>
-                <th>Ruby</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i></i></th>
-              </tr>
-              <tr>
-                <th colspan="3">
-                  <h4>DISEÑO GRÁFICO</h4>
-                </th>
-              </tr>
-              <tr>
-                <th><i>Ai</i></th>
-                <th>Adobe illustrator</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"> </i></i></th>
-              </tr>
-              <tr>
-                <th><i>Ps</i></th>
-                <th>Adobe Photoshop</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"></i><i class="fa fa-circle-thin"> </i></i></th>
-              </tr>
-              <tr>
-                <th colspan="3">
-                  <h4>IDIOMAS	</h4>
-                </th>
-              </tr>
-              <tr>
-                <th><i class="fa fa-comments"></i></th>
-                <th>Inglés</th>
-                <th><i class="fa fa-circle"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle-thin"></i></i></th>
-              </tr>
-            </table>
-          </article>
-        </div>
-        <div class="col-xs-8"> 
-          <article class="hide" id="educacion">
-            <ul>
-              <li>Analista Universitario en Sistemas, Instituto Politécnico Superior. Inscripción 2018 con materias homologadas.</li>
-              <li>Licenciatura en Biotecnología, Universidad Nacional de Rosario. 2012-2015.</li>
-              <li>Educación secundaria, Instituto Politécnico Superior. 2005-2011.</li>
-              <li>Curso desarrollo Java, plan 111 mil programadores. 2017-act.</li>
-              <li>Inglés 4to Adol Senior, ARICANA. 2008-2010.</li>
-            </ul>
-          </article>
-        </div>
-        <div class="col-xs-8"> 
-          <article class="hide" id="experiencia">
-            <ul>
-              <li>Preventista en Distribuidora Correcaminos. 2016-act.
-                <quote>Desarrollé el sistema de carga de pedidos, estadísticas y facturación utilizando herramientas de Google.</quote>
-              </li>
-              <li>Docente Particular, Instituto INEI. 2012-2015.</li>
-              <li>Pasante, Instituto de Biología Molecular de Rosario (IBR-CONICET). abr-sept 2015.</li>
-            </ul>
-          </article>
         </div>
       </div>
     </section>

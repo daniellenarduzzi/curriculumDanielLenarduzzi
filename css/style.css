@@ -5,3 +5,9 @@ img{
 .hide{
   visibility: hidden;
 }
+.botoncurri{
+  background-color: #0637c9;
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+}

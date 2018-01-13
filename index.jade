@@ -5,7 +5,8 @@ html(lang='es')
     meta(charset='utf-8')
     meta(name="viewport",content="width=device-width")
     link(rel="stylesheet", href="css/style.css", attr)
-    link(rel="text/javascript", href="js/codigo.css", attr)
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="/js/codigo.js")
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", attr)
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", attr)
   body
@@ -31,134 +32,141 @@ html(lang='es')
         .col-xs-8 
           h2 Algo sobre mi... 
         .col-xs-8  
-          nav#navcurriculum
-          .row
-            .col-xs-3
-              a(href="http://", target="_blank") resumen
-            .col-xs-3
-              a(href="http://", target="_blank") habilidades
-            .col-xs-3
-              a(href="http://", target="_blank") educacion
-            .col-xs-3  
-              a(href="http://", target="_blank") experiencia laboral
-        .col-xs-8  
-          article#resumen
-            p.
-              Apasionado por aprender y desarrollar nuevas habilidades. En mi formación combino el autoaprendizaje con la educación formal. Luego de egresar del Instituto Politécnico Superior, cursé 25 asignaturas en la universidad sobre matemática, física, química, biología, con promedio 9. Actualmente desarrollo mis competencias en diseño de software. Soy alumno inscripto de la carrera analista de sistemas en el IPS. Poseo certificado de Front-end Developer y 8 cursos completos de desarrollo de software.
-        .col-xs-8  
-          article.hide#habilidades
-            table
-              tr
-                th(colspan="3"): h4 CIENCIAS EXACTAS:
-              tr
-                th: i.fa.fa-area-chart 
-                th Matemática
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle 
-              tr
-                th: i.fa.fa-leaf
-                th Física
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle-thin
-              tr
-                th: i.fa.fa-flask
-                th Química
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle-thin
-              tr
-                th(colspan="3"): h4 INFORMÁTICA:
-              tr
-                th: i.fa.fa-html5
-                th Diseño web
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin 
-              tr
-                th: i.fa.fa-git
-                th Git
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-              tr
-                th: i.fa.fa-linux
-                th Linux
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-              tr
-                th: i.fa.fa-coffee
-                th Java
-                th: i.fa.fa-circle
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-              tr
-                th: i.fa.fa-diamond
-                th Ruby
-                th: i.fa.fa-circle
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-              tr
-                th(colspan="3"): h4 DISEÑO GRÁFICO
-              tr
-                th: i Ai
-                th Adobe illustrator
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin 
-              tr
-                th: i Ps
-                th Adobe Photoshop
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin
-                  i.fa.fa-circle-thin 
-              tr
-                th(colspan="3"): h4 IDIOMAS	
-              tr
-                th: i.fa.fa-comments
-                th Inglés
-                th: i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle
-                  i.fa.fa-circle-thin
-        .col-xs-8  
-          article.hide#educacion
-            ul
-              li Analista Universitario en Sistemas, Instituto Politécnico Superior. Inscripción 2018 con materias homologadas.
-              li Licenciatura en Biotecnología, Universidad Nacional de Rosario. 2012-2015.
-              li Educación secundaria, Instituto Politécnico Superior. 2005-2011.
-              li Curso desarrollo Java, plan 111 mil programadores. 2017-act.
-              li Inglés 4to Adol Senior, ARICANA. 2008-2010.
-        .col-xs-8  
-          article.hide#experiencia
-            ul
-              li Preventista en Distribuidora Correcaminos. 2016-act.
-                quote Desarrollé el sistema de carga de pedidos, estadísticas y facturación utilizando herramientas de Google.
-              li Docente Particular, Instituto INEI. 2012-2015.
-              li Pasante, Instituto de Biología Molecular de Rosario (IBR-CONICET). abr-sept 2015.
+          #myCarousel.carousel.slide(data-ride="carousel")
+            ol.carousel-indicators
+              li.active(data-target="#myCarousel")(data-slide-to="0")
+              li(data-target="#myCarousel")(data-slide-to="1")
+              li(data-target="#myCarousel")(data-slide-to="2")
+            ol
+            .carousel-inner
+              .item.active
+                article.artcurri#resumen
+                p.
+                  Apasionado por aprender y desarrollar nuevas habilidades. En mi formación combino el autoaprendizaje con la educación formal. Luego de egresar del Instituto Politécnico Superior, cursé 25 asignaturas en la universidad sobre matemática, física, química, biología, con promedio 9. Actualmente desarrollo mis competencias en diseño de software. Soy alumno inscripto de la carrera analista de sistemas en el IPS. Poseo certificado de Front-end Developer y 8 cursos completos de desarrollo de software.
+              .item
+                article.artcurri#habilidades
+                  table
+                    tr
+                      th(colspan="3"): h4 CIENCIAS EXACTAS:
+                    tr
+                      th: i.fa.fa-area-chart 
+                      th Matemática
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle 
+                    tr
+                      th: i.fa.fa-leaf
+                      th Física
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                    tr
+                      th: i.fa.fa-flask
+                      th Química
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                    tr
+                      th(colspan="3"): h4 INFORMÁTICA:
+                    tr
+                      th: i.fa.fa-html5
+                      th Diseño web
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin 
+                    tr
+                      th: i.fa.fa-git
+                      th Git
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                    tr
+                      th: i.fa.fa-linux
+                      th Linux
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                    tr
+                      th: i.fa.fa-coffee
+                      th Java
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                    tr
+                      th: i.fa.fa-diamond
+                      th Ruby
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                    tr
+                      th(colspan="3"): h4 DISEÑO GRÁFICO
+                    tr
+                      th: i Ai
+                      th Adobe illustrator
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin 
+                    tr
+                      th: i Ps
+                      th Adobe Photoshop
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin
+                        i.fa.fa-circle-thin 
+                    tr
+                      th(colspan="3"): h4 IDIOMAS	
+                    tr
+                      th: i.fa.fa-comments
+                      th Inglés
+                      th: i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        i.fa.fa-circle-thin
+              .item
+                article.artcurri#educacion
+                  ul
+                    li Analista Universitario en Sistemas, Instituto Politécnico Superior. Inscripción 2018 con materias homologadas.
+                    li Licenciatura en Biotecnología, Universidad Nacional de Rosario. 2012-2015.
+                    li Educación secundaria, Instituto Politécnico Superior. 2005-2011.
+                    li Curso desarrollo Java, plan 111 mil programadores. 2017-act.
+                    li Inglés 4to Adol Senior, ARICANA. 2008-2010.
+                    
+                    
+                    
+                      
+              .item
+                article.artcurri#experiencia
+                  ul
+                    li Preventista en Distribuidora Correcaminos. 2016-act.
+                      quote Desarrollé el sistema de carga de pedidos, estadísticas y facturación utilizando herramientas de Google.
+                    li Docente Particular, Instituto INEI. 2012-2015.
+                    li Pasante, Instituto de Biología Molecular de Rosario (IBR-CONICET). abr-sept 2015.      
+            a.left.carousel-control(href="#myCarousel",data-slide="prev")
+              span.glyphicon.glyphicon-chevron-left
+              span.sr-only Previous
+            a.right.carousel-control(href="#myCarousel",data-slide="next")
+              span.glyphicon.glyphicon-chevron-right
+              span.sr-only Next
     section.hide#contacto  
           article.hide#contacto
             table
